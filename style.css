@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --width1: 30%;
+  --width2: 28%;
+  --width3: 26%;
+}
+
+.main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  height: 100dvh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.main > h3 {
+  font-size: 4.5vmin;
+}
+
+.fa-bars {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.fa-bars:hover {
+  background-color: #00000033;
+}
+
+.black {
+  height: 100dvh;
+  width: var(--width1);
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+  transition-delay: 0.4s;
+}
+
+.red {
+  height: 100dvh;
+  width: var(--width2);
+  position: absolute;
+  background-color: red;
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.white {
+  height: 100dvh;
+  width: var(--width3);
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: -100%;
+  padding-top: 5vmin;
+  padding-left: 2vmin;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.nav.active .white {
+  left: 0;
+  transition-delay: 0.4s;
+}
+
+.nav.active .red {
+  left: 0;
+  transition-delay: 0.2s;
+}
+
+.nav.active .black {
+  left: 0;
+  transition-delay: 0s;
+}
+
+.fa-multiply {
+  position: absolute;
+  right: 5%;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.white div {
+  font-size: 2vmin;
+  margin-block: 4%;
+}
+
+.white .list {
+  font-size: 1em;
+}
+
+.white .list2 {
+  position: relative;
+  left: 10%;
+}
+
+@media only screen and (orientation: portrait) {
+  :root {
+    --width1: 50%;
+    --width2: 48%;
+    --width3: 46%;
+  }
+
+  .white div {
+    font-size: 1.4vmax;
+    margin-block: 8%;
+  }
+}
